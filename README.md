@@ -1,5 +1,7 @@
 EECS4312 Winter26:Lab3
 
+# Name: Mohsen Maoodhah
+# Student number: 220153425
 # Title: FROM ELICITATION TO CONSTRAINTS, INVARIANTS, AND TESTS
 
 # Medication Dispensing System Documentation
