@@ -1,7 +1,6 @@
 from datetime import date as Date
 
 
-# You can expand this later. For now it's a simple source of truth.
 MAX_DAILY_DOSE_MG = {
     "amoxicillin": 3000,
     "ibuprofen": 2400,
@@ -13,14 +12,12 @@ class DispenseEvent:
 
     def __init__(self, patient_id, medication, dose_mg, quantity, dispense_date=None):
 
-        # Basic identifier constraints (reasonable safety constraints)
         if patient_id is None or str(patient_id).strip() == "":
             raise ValueError("patient_id must be non-empty")
 
         if medication is None or str(medication).strip() == "":
             raise ValueError("medication must be non-empty")
 
-        # Normalize medication key for dose lookups
         med_key = str(medication).strip().lower()
 
         # Constraint 1: dose must be positive
